@@ -54,7 +54,7 @@ Create a database for Entracle via your favourite database client.
 ### Step 3: Configure your environment variables.
 You can either visit your website and complete the installation wizard or you can install and configure manually. [Manual Configuration.](bear://x-callback-url/open-note?id=C8E146D2-9C63-4203-9915-F1AED180ADEA-68149-0000AC9826C58FD3)
 
-We’ll first show you how to configure using installation wizard.
+#### Configure using installation wizard.
 
 If your server is example.com then visit example.com/install and you should see an installation wizard pop up.
 
@@ -73,7 +73,23 @@ Now that all directories have the correct permissions , let’s configure the en
 
 You can either choose to follow the wizard or use a text editor to setup the .env file.
 
+#### Configure Manually
 If you are familiar with Laravel you can go ahead and configure the .env file as necessary. The only changes that are to be made is specifying the Database details for now.
+
+You need to change the `DB_DATABASE`, `DB_USERNAME` & `DB_PASSWORD`
+to what you created in [here](#step-2-create-an-empty-database-mysql).
+The host and port remains the same for most of the cases.
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=yourdatabasename
+DB_USERNAME=yourdatabaseusername
+DB_PASSWORD=yourpassword
+```
+
+
 
 ## Migrating & Seeding the Database
 
